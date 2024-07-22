@@ -793,7 +793,8 @@ div .dot {
   cursor: pointer;
   transition-duration: 1s;
   overflow: hidden;
-  margin-left: 2.5%;
+  margin-left: 50%;
+  transform:translate(-50%,-50%);
 }
 
 .BtnClose::before {
