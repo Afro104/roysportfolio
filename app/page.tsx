@@ -157,7 +157,14 @@ export default function Home() {
             }}
           >
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              <div className="shadow">Resume</div>
+              {/* <div className="shadow">Resume</div> */}
+              <div className="table center">
+                <div className="monitor-wrapper center">
+                    <div className="monitor center">
+                        <p>Rogelio Rodriguez's Resume,"Creativity is seeing what others see and thinking what no one else ever thought."-Albert Einstein.</p>
+                    </div>
+                </div>
+            </div>
             </Typography>
             <DocViewer
               documents={docs}
