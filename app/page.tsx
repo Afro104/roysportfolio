@@ -27,7 +27,6 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const handleOpen = () =>{ 
     setOpen(true)
-    alert("UOURRR")
   };
   const handleClose = () => setOpen(false);
   const [docs, setDocs] = useState<Document[]>([]);
