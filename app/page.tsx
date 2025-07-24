@@ -4,6 +4,8 @@ import Image from "next/image";
 import { faFile } from "@fortawesome/free-regular-svg-icons/faFile";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
 import { Box, Modal, Typography } from "@mui/material";
 import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 import "@cyntler/react-doc-viewer/dist/index.css";
@@ -13,6 +15,7 @@ interface Document {
 }
 
 export default function Home() {
+  
   const style = {
     position: 'absolute',
     top: '29rem',
@@ -38,7 +41,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+    <>
+      <Head>
+        <title>Rogelio Rodriguez Portfolio</title>
+      </Head>
+      <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
+      <Script src="/solar-system.js" strategy="afterInteractive" />
+      {/* Add required initial classes for JS to work */}
+      <div id="body-classes" className="view-3D set-speed scale-stretched">
+        <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
       <div className="box z-40">
         <div className="inner">
           <span>Rogelio Rodriguez's</span>
@@ -47,7 +58,7 @@ export default function Home() {
           <span>Portfolio</span>
         </div>
       </div>
-      <div className="z-50">
+      <div className="z-50" style={{position: 'absolute'}}>
         <ul>
           <li>
             <a className="linkedIn" href="https://www.linkedin.com/in/rogelio-rodriguez-676552182/" target="_blank" rel="noopener noreferrer">
@@ -196,6 +207,86 @@ export default function Home() {
           </div>
         </Box>
       </Modal>
+      <>
+  <div id="navbar">
+  
+  </div>
+  
+  <div id="universe" className="scale-stretched">
+    <div id="galaxy">
+      <div id="solar-system" className="earth">
+        <div id="mercury" className="orbit">
+          <div className="pos">
+            <div className="planet">
+             
+            </div>
+          </div>
+        </div>
+        <div id="venus" className="orbit">
+          <div className="pos">
+            <div className="planet">
+              
+            </div>
+          </div>
+        </div>
+        <div id="earth" className="orbit">
+          <div className="pos">
+            <div className="orbit">
+              <div className="pos">
+                <div className="moon" />
+              </div>
+            </div>
+            <div className="planet">
+  
+            </div>
+          </div>
+        </div>
+        <div id="mars" className="orbit">
+          <div className="pos">
+            <div className="planet">
+              
+            </div>
+          </div>
+        </div>
+        <div id="jupiter" className="orbit">
+          <div className="pos">
+            <div className="planet">
+              
+            </div>
+          </div>
+        </div>
+        <div id="saturn" className="orbit">
+          <div className="pos">
+            <div className="planet">
+              <div className="ring" />
+              
+            </div>
+          </div>
+        </div>
+        <div id="uranus" className="orbit">
+          <div className="pos">
+            <div className="planet">
+             
+            </div>
+          </div>
+        </div>
+        <div id="neptune" className="orbit">
+          <div className="pos">
+            <div className="planet">
+             
+            </div>
+          </div>
+        </div>
+        <div id="sun">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</>
+
     </main>
+      </div>
+    </>
   );
 }
