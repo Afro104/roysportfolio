@@ -50,7 +50,8 @@ export default function Home() {
       {/* Add required initial classes for JS to work */}
       <div id="body-classes" className="view-3D set-speed scale-stretched">
         <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <div className="box z-40">
+        
+      <div className="box z-40" style={{width: "100%"}}>
         <div className="inner">
           <span>Rogelio Rodriguez's</span>
         </div>
@@ -58,7 +59,7 @@ export default function Home() {
           <span>Portfolio</span>
         </div>
       </div>
-      <div className="z-50" style={{position: 'absolute'}}>
+<div className="z-50" style={{position: 'absolute', width: '100%', height:'100%'}}>
         <ul>
           <li>
             <a className="linkedIn" href="https://www.linkedin.com/in/rogelio-rodriguez-676552182/" target="_blank" rel="noopener noreferrer">

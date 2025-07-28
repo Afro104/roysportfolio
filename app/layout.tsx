@@ -16,6 +16,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <style>{`
+          html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+          }
+          body {
+            width: 100vw;
+            box-sizing: border-box;
+            min-height: 100vh;
+            position: relative;
+            overscroll-behavior-x: none;
+          }
+        `}</style>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
