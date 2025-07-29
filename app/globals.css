@@ -592,6 +592,12 @@ ul li a:hover span:nth-child(4) {
 .linkedIn:hover span { 
   background: #3b5998;
 }
+.desktop:hover {
+  color: #EBB55F;
+}
+.desktop:hover span { 
+  background: #EBB55F;
+}
 .resume:hover {
   color: #1da1f2;
 }
@@ -2565,4 +2571,14 @@ body {
     font-size: 100%; } }
 @media screen and (min-width: 1600px) {
   .zoom-close .scale-d #solar-system {
-    margin-left: -120%; } }
+    margin-left: -120%;
+   } }
+   @media screen and (max-width: 450px) {
+   .table .monitor-wrapper .monitor {
+    width: 24.4rem;
+  }
+  ul li a {
+
+    margin: 0 2px;
+  }
+}

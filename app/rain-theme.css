@@ -1,0 +1,386 @@
+/* Hide lightning button when no-lightning class is present */
+.rain.no-lightning:after {
+  display: none !important;
+}
+
+/* Rain theme for project modal */
+.rain {
+  position: absolute;
+  width: 120vw;
+  height: 100vh;
+  cursor: pointer;
+  z-index: 0;
+  left: -10vw;
+}
+
+.rain .left,
+.rain .right {
+  width: 20vw;
+  height: 100vh;
+  left: 10vw;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.rain .left:hover ~ .drop {
+  --angle: 105deg;
+}
+
+.rain .left:hover ~ .right:after {
+  transform: rotate(22deg);
+  transition: all 0.5s ease 0s;
+}
+
+.rain .right {
+  left: initial;
+  right: 10vw;
+}
+
+.rain .right:after {
+  content: "\25B3 \A \25BC";
+  position: fixed;
+  text-indent: 1px;
+  left: calc(50% - 30px);
+  top: 45px;
+  color: #fff8;
+  font-size: 20px;
+  border: 2px dashed #fff3;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 13px 18px;
+  text-align: center;
+  line-height: 15px;
+  transition: all 0.5s ease 0s;
+  white-space: pre-wrap;
+}
+
+.rain .right:hover:after {
+  transform: rotate(-22deg);
+  transition: all 0.5s ease 0s;
+}
+
+.rain .right:hover ~ .drop {
+  --angle: 75deg;
+}
+
+.rain .right.center {
+  right: 30vw;
+}
+
+.rain .right.center:after {
+  display: none;
+}
+
+.rain .right.center:hover ~ .drop {
+  --angle: 85deg;
+}
+
+.rain .right.center:hover ~ .right:after {
+  transform: rotate(-12deg);
+  transition: all 0.5s ease 0s;
+}
+
+.rain .left.center {
+  left: 30vw;
+}
+
+.rain .left.center:hover ~ .drop {
+  --angle: 95deg;
+}
+
+.rain .left.center:hover ~ .right:after {
+  transform: rotate(12deg);
+  transition: all 0.5s ease 0s;
+}
+
+.rain:active {
+  cursor: none;
+  animation: lightning 0.1s linear 0s 2, lightning 0.15s ease-out 0.25s 1;
+}
+
+.rain:active:after,
+.rain:active .right:after {
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.rain:after {
+  content: "\21AF";
+  position: fixed;
+  left: calc(50% - 30px);
+  bottom: 45px;
+  color: #fff8;
+  font-size: 35px;
+  border: 2px dashed #fff3;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 13px 18px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.5s ease 0s;
+  white-space: pre-wrap;
+}
+
+@keyframes lightning {
+  50% {
+    background: radial-gradient(
+        circle at calc(50% - 10vw) -20%,
+        #fff4,
+        #fff0 20%
+      ),
+      linear-gradient(180deg, #fff9, #fff3);
+  }
+}
+
+.drop {
+  border: 0.25vmin solid transparent;
+  border-bottom-color: #abc2e9;
+  position: absolute;
+  top: -5vmin;
+  --angle: 91deg;
+}
+
+.drop:nth-child(1) {
+  opacity: 0.45;
+  left: 120vw;
+  border-left-width: 8vmin;
+  animation: rain-fall-1 2.25s -2.5s ease-in infinite;
+}
+
+.drop:nth-child(2) {
+  opacity: 0.72;
+  left: 240vw;
+  border-left-width: 4vmin;
+  animation: rain-fall-2 1.8s -1.25s ease-in infinite;
+}
+
+.drop:nth-child(3) {
+  opacity: 0.18;
+  left: 360vw;
+  border-left-width: 6vmin;
+  animation: rain-fall-3 2.1s -3.75s ease-in infinite;
+}
+
+.drop:nth-child(4) {
+  opacity: 0.63;
+  left: 480vw;
+  border-left-width: 2vmin;
+  animation: rain-fall-4 1.95s -2.25s ease-in infinite;
+}
+
+.drop:nth-child(5) {
+  opacity: 0.89;
+  left: 600vw;
+  border-left-width: 7vmin;
+  animation: rain-fall-5 2.4s -1.5s ease-in infinite;
+}
+
+.drop:nth-child(6) {
+  opacity: 0.31;
+  left: 720vw;
+  border-left-width: 5vmin;
+  animation: rain-fall-6 2.7s -3.25s ease-in infinite;
+}
+
+.drop:nth-child(7) {
+  opacity: 0.56;
+  left: 840vw;
+  border-left-width: 3vmin;
+  animation: rain-fall-7 1.65s -1.75s ease-in infinite;
+}
+
+.drop:nth-child(8) {
+  opacity: 0.24;
+  left: 960vw;
+  border-left-width: 9vmin;
+  animation: rain-fall-8 2.85s -2.0s ease-in infinite;
+}
+
+.drop:nth-child(9) {
+  opacity: 0.78;
+  left: 1080vw;
+  border-left-width: 1vmin;
+  animation: rain-fall-9 2.1s -3.5s ease-in infinite;
+}
+
+.drop:nth-child(10) {
+  opacity: 0.42;
+  left: 1200vw;
+  border-left-width: 6vmin;
+  animation: rain-fall-10 2.4s -1.0s ease-in infinite;
+}
+
+.drop:nth-child(11) {
+  opacity: 0.67;
+  left: 1320vw;
+  border-left-width: 4vmin;
+  animation: rain-fall-11 1.95s -2.75s ease-in infinite;
+}
+
+.drop:nth-child(12) {
+  opacity: 0.19;
+  left: 1440vw;
+  border-left-width: 8vmin;
+  animation: rain-fall-12 2.25s -1.25s ease-in infinite;
+}
+
+.drop:nth-child(13) {
+  opacity: 0.83;
+  left: 1560vw;
+  border-left-width: 2vmin;
+  animation: rain-fall-13 2.7s -3.0s ease-in infinite;
+}
+
+.drop:nth-child(14) {
+  opacity: 0.35;
+  left: 1680vw;
+  border-left-width: 7vmin;
+  animation: rain-fall-14 1.8s -2.5s ease-in infinite;
+}
+
+.drop:nth-child(15) {
+  opacity: 0.61;
+  left: 1800vw;
+  border-left-width: 5vmin;
+  animation: rain-fall-15 2.1s -1.75s ease-in infinite;
+}
+
+@keyframes rain-fall-1 {
+  25% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-2 {
+  35% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-3 {
+  15% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-4 {
+  45% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-5 {
+  5% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-6 {
+  55% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-7 {
+  65% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-8 {
+  10% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-9 {
+  40% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-10 {
+  20% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-11 {
+  50% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-12 {
+  30% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-13 {
+  60% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-14 {
+  70% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
+
+@keyframes rain-fall-15 {
+  80% {
+    transform: rotate(91deg) translateX(0);
+  }
+  to {
+    transform: rotate(91deg) translateX(calc(100vh + 5vmin));
+  }
+}
