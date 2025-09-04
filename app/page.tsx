@@ -455,6 +455,46 @@ export default function Home() {
                   />
                 </a>
               </div>
+
+              {/* Ball Predictions Project */}
+              <div style={{ textAlign: 'center' }}>
+                <h3 style={{ 
+                  color: '#333', 
+                  marginBottom: '1rem', 
+                  fontSize: '0.9rem',
+                  fontWeight: '600'
+                }}>
+                  Ball Predictions
+                </h3>
+                <a 
+                  href="https://ballpredictions.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    cursor: 'pointer',
+                    textDecoration: 'none'
+                  }}
+                >
+                  <Image
+                    src="/ballpredictions.jpg"
+                    alt="Ball Predictions"
+                    width={120}
+                    height={120}
+                    style={{
+                      borderRadius: '12px',
+                      objectFit: 'cover',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                      transition: 'transform 0.2s ease-in-out'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                  />
+                </a>
+              </div>
             </div>
           </Box>
           <div className='FooterButtons'>
